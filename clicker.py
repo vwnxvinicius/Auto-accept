@@ -1,7 +1,12 @@
 from pyautogui import click
 from keyboard import is_pressed
+import pyautogui
+import Xlib
+import os
 #1366x768 -> x=679 y=533
 
+#
+pyautogui._pyautogui_x11._display = Xlib.display.Display(os.environ[ 'DISPLAY' ])
 #Main click
 def accept_match(rx, ry):
     x=679
