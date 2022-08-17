@@ -1,5 +1,3 @@
-from re import X
-import string
 from pyautogui import click
 from keyboard import is_pressed
 #1366x768 -> x=679 y=533
