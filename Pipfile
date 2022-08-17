@@ -8,6 +8,7 @@ django = "*"
 pyautogui = "*"
 keyboard = "*"
 gunicorn = "*"
+xlib = "*"
 
 [dev-packages]
 
