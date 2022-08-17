@@ -1,3 +1,5 @@
+'''
+
 from pyautogui import click
 from keyboard import is_pressed
 import pyautogui
@@ -40,3 +42,4 @@ def string_separator(string, n):
     else:
         return str_2
 
+'''
