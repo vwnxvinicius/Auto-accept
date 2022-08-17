@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 # Clicker functions
 from clicker import string_separator, accept_match
+from okok import click
 
 # Create your views here.
 def home(request):
@@ -16,11 +17,12 @@ def clicker(request):
     else:
         resolution_x = string_separator(resolution, 1)
         resolution_y = string_separator(resolution, 0)
-        accept_match(int(resolution_x), int(resolution_y))
+        clicker = click(int(resolution_x), int(resolution_y))
         return render(request, 'main/clicker.html', 
         {
             'resolution':resolution,
             'resolution_x':resolution_x,
             'resolution_y':resolution_y,
+            'clicker':clicker,
         }
         )

@@ -1,13 +1,9 @@
-from pyautogui import click
-from keyboard import is_pressed
-import pyautogui
-import os
+import win32api, win32con
 import time
-#1366x768 -> x=679 y=533
+from keyboard import is_pressed
 
-
-#Main click
-def accept_match(rx, ry):
+time.sleep(2)
+def click(rx,ry):
     x=679
     y=533
 
@@ -25,18 +21,10 @@ def accept_match(rx, ry):
 
     # Loop do clique
     while True:
-        click(x,y)
+        win32api.SetCursorPos((x,y))
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
+        time.sleep(3)
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
         if is_pressed('q'):
             break
-
-
-
-def string_separator(string, n):
-    x = string.find(' ')
-    str_1 = string[0:x]
-    str_2 = string[-x:]
-    if n == 1:
-        return str_1
-    else:
-        return str_2
 
