@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Accept</h1>
+    <p>Escolha sua resolução</p>
+    <form action="{% url 'clicker' %}">
+        <select name="resolution">
+            <option value="1920 1080">1920x1080</option>
+            <option value="1768 992">1768x992</option>
+            <option value="1680 1050">1680x1050</option>
+            <option value="1600 1024">1600x1024</option>
+            <option value="1600 900">1600x900</option>
+            <option value="1366 768">1366x768</option>
+            <option value="1360 760">1360x760</option>
+            <option value="1280 1024">1280x1024</option>
+            <option value="1280 960">1280x960</option>
+            <option value="1280 800">1280x800</option>
+            <option value="1280 768">1280x768</option>
+            <option value="1280 720">1280x720</option>
+            <option value="1176 664">1176x664</option>
+            <option value="1152 864">1152x864</option>
+            <option value="1024 768">1024x768</option>
+        </select>
+        <input type="submit" value="Selecionar">
+    </form>
+</body>
+</html>

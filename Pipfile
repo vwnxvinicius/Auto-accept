@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
+pyautogui = "*"
+keyboard = "*"
 
 [dev-packages]
 
