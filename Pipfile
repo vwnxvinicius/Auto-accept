@@ -9,7 +9,6 @@ pyautogui = "*"
 keyboard = "*"
 gunicorn = "*"
 xlib = "*"
-pywin32 = "*"
 
 [dev-packages]
 
