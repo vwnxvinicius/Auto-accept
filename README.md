@@ -17,5 +17,5 @@ No site feito em Django, o jogador escolhe a sua resolução(é assim que a gent
 o app, que tem uma interface feita utilizando Qt Designer e Pyqt5
 
 # Fim
-OBS: Se você está lendo essa versão do README.MD, quer dizer que nada do que eu falei acima tá pronto,
+OBS: Se você está lendo essa versão do README.md, quer dizer que nada do que eu falei acima tá pronto,
 mas caaaalma que logo logo vai estar(E o README também não vai ficar feio desse jeito coitado).
