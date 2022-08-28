@@ -1,28 +1,20 @@
-from django.http import HttpResponse
+from urllib import response
 from django.shortcuts import render
-# Clicker functions
-from clicker import string_separator, accept_match
-from okok import click
+import mimetypes
+import os
+from django.http.response import HttpResponse
+
 
 # Create your views here.
 def home(request):
     return render(request, 'main/home.html')
 
-def clicker(request):
-    try:
-        resolution = request.GET['resolution']
-    except (KeyError):
-        error_message = "Ocorreu um erro inesperado"
-        return render(request, 'main/error.html', {error_message: "error_message"})
-    else:
-        resolution_x = string_separator(resolution, 1)
-        resolution_y = string_separator(resolution, 0)
-        clicker = click(int(resolution_x), int(resolution_y))
-        return render(request, 'main/clicker.html', 
-        {
-            'resolution':resolution,
-            'resolution_x':resolution_x,
-            'resolution_y':resolution_y,
-            'clicker':clicker,
-        }
-        )
+def download_file(request):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    filename = 'mysetup.exe'
+    filepath = BASE_DIR + '/main/' + filename
+    path = open(filepath, 'rb')
+    mime_type, _ = mimetypes.guess_type(filepath)
+    response = HttpResponse(path, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    return response

@@ -1,5 +1,13 @@
-'''
+from importlib.resources import path
+import pathlib
 
+
+dir = pathlib.Path('diretorio')
+
+print(dir)
+
+
+'''
 from pyautogui import click
 from keyboard import is_pressed
 import pyautogui
@@ -30,8 +38,7 @@ def accept_match(rx, ry):
         click(x,y)
         if is_pressed('q'):
             break
-
-
+'''
 
 def string_separator(string, n):
     x = string.find(' ')
@@ -42,4 +49,4 @@ def string_separator(string, n):
     else:
         return str_2
 
-'''
+
